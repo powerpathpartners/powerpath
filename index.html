@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PowerPath Partners - Pitch Deck</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #0a0a0a;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        .deck-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .slide {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 40px;
+            position: relative;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            animation: slideIn 0.8s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .slide-number {
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            color: #00ff88;
+            font-size: 14px;
+            font-weight: 600;
+            opacity: 0.7;
+        }
+
+        h1 {
+            font-size: 4em;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, #00ff88, #0088ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 3em;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #ffffff;
+            line-height: 1.3;
+        }
+
+        h3 {
+            font-size: 2em;
+            font-weight: 600;
+            color: #00ff88;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .subtitle {
+            font-size: 1.5em;
+            color: #a0a0a0;
+            text-align: center;
+            margin-bottom: 40px;
+            max-width: 800px;
+        }
+
+        .logline {
+            font-size: 1.8em;
+            text-align: center;
+            margin: 40px 0;
+            padding: 30px;
+            border-left: 4px solid #00ff88;
+            background: rgba(0, 255, 136, 0.05);
+            max-width: 900px;
+        }
+
+        .logline span {
+            display: block;
+            margin: 10px 0;
+            opacity: 0;
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        .logline span:nth-child(1) { animation-delay: 0.3s; }
+        .logline span:nth-child(2) { animation-delay: 0.6s; }
+        .logline span:nth-child(3) { animation-delay: 0.9s; }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            width: 100%;
+            max-width: 1000px;
+            margin: 40px 0;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid rgba(0, 255, 136, 0.3);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            background: rgba(0, 255, 136, 0.1);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0, 255, 136, 0.2);
+        }
+
+        .stat-number {
+            font-size: 3em;
+            font-weight: 800;
+            color: #00ff88;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1.1em;
+            color: #a0a0a0;
+        }
+
+        .problem-list {
+            list-style: none;
+            max-width: 900px;
+            margin: 40px 0;
+        }
+
+        .problem-list li {
+            font-size: 1.3em;
+            margin: 25px 0;
+            padding-left: 50px;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .problem-list li:before {
+            content: "⚠️";
+            position: absolute;
+            left: 0;
+            font-size: 1.5em;
+        }
+
+        .advantage-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            max-width: 1100px;
+            margin: 50px 0;
+        }
+
+        .advantage-card {
+            background: linear-gradient(135deg, rgba(0, 255, 136, 0.1), rgba(0, 136, 255, 0.05));
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            border: 2px solid rgba(0, 255, 136, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .advantage-card:before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 255, 136, 0.1) 0%, transparent 70%);
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 0.3; }
+        }
+
+        .advantage-number {
+            font-size: 3em;
+            font-weight: 800;
+            color: #00ff88;
+            margin-bottom: 20px;
+        }
+
+        .advantage-title {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+
+        .advantage-desc {
+            font-size: 1.1em;
+            color: #a0a0a0;
+            line-height: 1.5;
+        }
+
+        .formula-box {
+            background: rgba(0, 255, 136, 0.05);
+            border: 2px solid #00ff88;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+            max-width: 900px;
+            text-align: center;
+        }
+
+        .formula-text {
+            font-size: 1.8em;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 30px;
+        }
+
+        .formula-equals {
+            font-size: 2.5em;
+            color: #00ff88;
+            font-weight: 800;
+            margin-top: 20px;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            max-width: 900px;
+            margin: 40px 0;
+        }
+
+        .metric-item {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 4px solid #00ff88;
+        }
+
+        .metric-label {
+            font-size: 1.1em;
+            color: #a0a0a0;
+            margin-bottom: 10px;
+        }
+
+        .metric-value {
+            font-size: 2em;
+            font-weight: 700;
+            color: #00ff88;
+        }
+
+        .revenue-streams {
+            display: flex;
+            gap: 30px;
+            max-width: 1100px;
+            margin: 40px 0;
+        }
+
+        .stream-card {
+            flex: 1;
+            background: linear-gradient(135deg, rgba(0, 136, 255, 0.1), rgba(0, 255, 136, 0.05));
+            padding: 35px;
+            border-radius: 20px;
+            border: 1px solid rgba(0, 255, 136, 0.3);
+            text-align: center;
+        }
+
+        .stream-number {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: #00ff88;
+            color: #0a0a0a;
+            border-radius: 50%;
+            line-height: 50px;
+            font-size: 1.5em;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .stream-title {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+
+        .stream-desc {
+            font-size: 1em;
+            color: #a0a0a0;
+            line-height: 1.5;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            max-width: 1000px;
+            margin: 40px 0;
+        }
+
+        .team-member {
+            text-align: center;
+        }
+
+        .member-avatar {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #00ff88, #0088ff);
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            font-weight: 800;
+            color: #0a0a0a;
+        }
+
+        .member-name {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 5px;
+        }
+
+        .member-role {
+            font-size: 0.9em;
+            color: #00ff88;
+        }
+
+        .use-of-funds {
+            max-width: 800px;
+            margin: 40px 0;
+        }
+
+        .fund-item {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .fund-bar {
+            flex: 1;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            margin-left: 20px;
+        }
+
+        .fund-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #00ff88, #0088ff);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            padding: 0 15px;
+            color: #0a0a0a;
+            font-weight: 700;
+        }
+
+        .fund-label {
+            min-width: 200px;
+            font-size: 1.1em;
+            color: #ffffff;
+        }
+
+        .vision-text {
+            font-size: 2.2em;
+            font-weight: 300;
+            text-align: center;
+            max-width: 900px;
+            line-height: 1.6;
+            margin: 40px 0;
+        }
+
+        .vision-text strong {
+            color: #00ff88;
+            font-weight: 700;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, rgba(0, 255, 136, 0.2), rgba(0, 136, 255, 0.1));
+            border: 2px solid #00ff88;
+            border-radius: 30px;
+            padding: 60px 40px;
+            max-width: 900px;
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .cta-text {
+            font-size: 1.8em;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 20px 50px;
+            background: linear-gradient(135deg, #00ff88, #0088ff);
+            color: #0a0a0a;
+            text-decoration: none;
+            font-size: 1.3em;
+            font-weight: 700;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(0, 255, 136, 0.4);
+        }
+
+        .slide-title {
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            font-size: 1em;
+            color: #00ff88;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0.7;
+        }
+
+        .highlight {
+            color: #00ff88;
+            font-weight: 700;
+        }
+
+        .market-size {
+            font-size: 5em;
+            font-weight: 800;
+            color: #00ff88;
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5em; }
+            h2 { font-size: 2em; }
+            .advantage-grid { grid-template-columns: 1fr; }
+            .revenue-streams { flex-direction: column; }
+            .team-grid { grid-template-columns: repeat(2, 1fr); }
+            .metrics-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="deck-container">
+        <!-- Slide 1: Opening Hook -->
+        <div class="slide">
+            <span class="slide-number">01</span>
+            <h1>We Don't Just Develop Land.<br>We Power the Digital Future.</h1>
+            <div class="logline">
+                <span>We turn land into power.</span>
+                <span>We turn power into projects.</span>
+                <span>We turn projects into data centers.</span>
+            </div>
+            <div class="subtitle">PowerPath Partners</div>
+        </div>
+
+        <!-- Slide 2: The Problem -->
+        <div class="slide">
+            <span class="slide-number">02</span>
+            <span class="slide-title">The Problem</span>
+            <h2>The Trillion-Dollar Crisis<br>Nobody's Talking About</h2>
+            <ul class="problem-list">
+                <li>By 2030, data centers will consume <span class="highlight">8% of global electricity</span></li>
+                <li>AI boom demands <span class="highlight">5x current data center capacity</span> by 2028</li>
+                <li>Critical shortage: Only <span class="highlight">3% of US land</span> is "data center ready"</li>
+                <li>Fortune 500s are desperately seeking powered sites <span class="highlight">RIGHT NOW</span></li>
+            </ul>
+            <div class="subtitle">This isn't an opportunity. It's an infrastructure emergency.</div>
+        </div>
+
+        <!-- Slide 3: Why Others Fail -->
+        <div class="slide">
+            <span class="slide-number">03</span>
+            <span class="slide-title">Market Failure</span>
+            <h2>Why Everyone Else Fails</h2>
+            <div class="stat-grid">
+                <div class="stat-card">
+                    <div class="stat-number">18-36</div>
+                    <div class="stat-label">Month Delays (Industry Average)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">40%</div>
+                    <div class="stat-label">Average Budget Overruns</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">75%</div>
+                    <div class="stat-label">Projects in Suboptimal Locations</div>
+                </div>
+            </div>
+            <div class="subtitle">Traditional developers know land but not power.<br>Utilities have power but can't develop.<br>Data center operators need sites but lack both.</div>
+        </div>
+
+        <!-- Slide 4: PowerPath Advantage -->
+        <div class="slide">
+            <span class="slide-number">04</span>
+            <span class="slide-title">Our Solution</span>
+            <h2>The PowerPath Advantage</h2>
+            <h3>"We Speak All Three Languages"</h3>
+            <div class="advantage-grid">
+                <div class="advantage-card">
+                    <div class="advantage-number">1</div>
+                    <div class="advantage-title">Land Expertise</div>
+                    <div class="advantage-desc">Strategic site selection, entitlements, zoning mastery</div>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-number">2</div>
+                    <div class="advantage-title">Power Architecture</div>
+                    <div class="advantage-desc">Direct utility relationships, grid interconnection, renewables</div>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-number">3</div>
+                    <div class="advantage-title">Data Center DNA</div>
+                    <div class="advantage-desc">Purpose-built for hyperscale requirements from day one</div>
+                </div>
+            </div>
+            <div class="subtitle">The only "trilingual" player in the market</div>
+        </div>
+
+        <!-- Slide 5: Our Formula -->
+        <div class="slide">
+            <span class="slide-number">05</span>
+            <span class="slide-title">The Magic</span>
+            <h2>The PowerPath Playbook</h2>
+            <div class="formula-box">
+                <div class="formula-text">
+                    Raw Land + Power Infrastructure + Speed to Market
+                </div>
+                <div class="formula-equals">= 3x Value Creation</div>
+            </div>
+            <div class="metrics-grid">
+                <div class="metric-item">
+                    <div class="metric-label">Acquire strategic parcels</div>
+                    <div class="metric-value">Near power substations</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-label">Pre-position infrastructure</div>
+                    <div class="metric-value">Power, fiber, water, permits</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-label">Industry delivery time</div>
+                    <div class="metric-value">18-36 months</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-label">Our delivery time</div>
+                    <div class="metric-value">6-9 months</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: Proof Points -->
+        <div class="slide">
+            <span class="slide-number">06</span>
+            <span class="slide-title">Traction</span>
+            <h2>Track Record of Transformation</h2>
+            <div class="stat-grid">
+                <div class="stat-card">
+                    <div class="stat-number">12</div>
+                    <div class="stat-label">Active Sites in Development</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">500MW</div>
+                    <div class="stat-label">Secured Power Capacity</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">8 mo</div>
+                    <div class="stat-label">Average Time to Market</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">3.2x</div>
+                    <div class="stat-label">Average ROI Delivered</div>
+                </div>
+            </div>
+            <div class="subtitle">Making CFOs weep with joy since 2022</div>
+        </div>
+
+        <!-- Slide 7: Market Dynamics -->
+        <div class="slide">
+            <span class="slide-number">07</span>
+            <span class="slide-title">Market Opportunity</span>
+            <h2>The Perfect Storm</h2>
+            <div class="market-size">$500B+</div>
+            <div class="subtitle">Total Addressable Market by 2030</div>
+            <div class="stat-grid">
+                <div class="stat-card">
+                    <div class="stat-number">15%</div>
+                    <div class="stat-label">Annual Growth Rate</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">10x</div>
+                    <div class="stat-label">AI Computing Demand by 2028</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">5G</div>
+                    <div class="stat-label">Edge Infrastructure Explosion</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">Net Zero</div>
+                    <div class="stat-label">Renewable Mandates by 2030</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 8: Business Model -->
+        <div class="slide">
+            <span class="slide-number">08</span>
+            <span class="slide-title">Revenue Model</span>
+            <h2>Three Revenue Streams</h2>
+            <div class="revenue-streams">
+                <div class="stream-card">
+                    <div class="stream-number">1</div>
+                    <div class="stream-title">Build-to-Suit</div>
+                    <div class="stream-desc">Custom powered sites for hyperscalers and enterprises</div>
+                </div>
+                <div class="stream-card">
+                    <div class="stream-number">2</div>
+                    <div class="stream-title">Speculative Development</div>
+                    <div class="stream-desc">Ready-now inventory for urgent deployment needs</div>
+                </div>
+                <div class="stream-card">
+                    <div class="stream-number">3</div>
+                    <div class="stream-title">Power-as-a-Service</div>
+                    <div class="stream-desc">Ongoing infrastructure management and optimization</div>
+                </div>
+            </div>
+            <div class="subtitle">Multiple ways to capture value across the entire lifecycle</div>
+        </div>
+
+        <!-- Slide 9: Competitive Moat -->
+        <div class="slide">
+            <span class="slide-number">09</span>
+            <span class="slide-title">Defensibility</span>
+            <h2>Why We Can't Be Copied</h2>
+            <div class="stat-grid">
+                <div class="stat-card">
+                    <div class="stat-number">🔒</div>
+                    <div class="stat-label">Proprietary Site Selection Algorithm</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">🤝</div>
+                    <div class="stat-label">Deep Utility Relationships (Years to Build)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">⚡</div>
+                    <div class="stat-label">Pre-Negotiated Power Allocations</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">🚀</div>
+                    <div class="stat-label">First-Mover in Key Growth Markets</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 10: The Team -->
+        <div class="slide">
+            <span class="slide-number">10</span>
+            <span class="slide-title">Leadership</span>
+            <h2>The Only Team That Matters</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-avatar">CEO</div>
+                    <div class="member-name">[Name]</div>
+                    <div class="member-role">20+ Years Data Centers</div>
+                </div>
+                <div class="team-member">
+                    <div class="member-avatar">CPO</div>
+                    <div class="member-name">[Name]</div>
+                    <div class="member-role">Former Utility Executive</div>
+                </div>
+                <div class="team-member">
+                    <div class="member-avatar">CDO</div>
+                    <div class="member-name">[Name]</div>
+                    <div class="member-role">$2B Development Track Record</div>
+                </div>
+                <div class="team-member">
+                    <div class="member-avatar">CFO</div>
+                    <div class="member-name">[Name]</div>
+                    <div class="member-role">3 Successful Exits</div>
+                </div>
+            </div>
+            <div class="subtitle">Combined 100+ years across land, power, and data centers</div>
+        </div>
+
+        <!-- Slide 11: Traction & Pipeline -->
+        <div class="slide">
+            <span class="slide-number">11</span>
+            <span class="slide-title">Pipeline</span>
+            <h2>Momentum is Everything</h2>
+            <div class="stat-grid">
+                <div class="stat-card">
+                    <div class="stat-number">$450M</div>
+                    <div class="stat-label">Current Pipeline Value</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">8</div>
+                    <div class="stat-label">LOIs from Fortune 500s</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">5</div>
+                    <div class="stat-label">States with Active Projects</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">Q2 '25</div>
+                    <div class="stat-label">First Site Delivery</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 12: The Ask -->
+        <div class="slide">
+            <span class="slide-number">12</span>
+            <span class="slide-title">Investment</span>
+            <h2>Fueling Hypergrowth</h2>
+            <h3>Raising $50M Series A</h3>
+            <div class="use-of-funds">
+                <div class="fund-item">
+                    <span class="fund-label">Land Acquisition</span>
+                    <div class="fund-bar">
+                        <div class="fund-fill" style="width: 40%;">40% - $20M</div>
+                    </div>
+                </div>
+                <div class="fund-item">
+                    <span class="fund-label">Power Infrastructure</span>
+                    <div class="fund-bar">
+                        <div class="fund-fill" style="width: 30%;">30% - $15M</div>
+                    </div>
+                </div>
+                <div class="fund-item">
+                    <span class="fund-label">Team Scaling</span>
+                    <div class="fund-bar">
+                        <div class="fund-fill" style="width: 20%;">20% - $10M</div>
+                    </div>
+                </div>
+                <div class="fund-item">
+                    <span class="fund-label">Working Capital</span>
+                    <div class="fund-bar">
+                        <div class="fund-fill" style="width: 10%;">10% - $5M</div>
+                    </div>
+                </div>
+            </div>
+            <div class="subtitle">Expected Return: 5x in 3 years</div>
+        </div>
+
+        <!-- Slide 13: Vision -->
+        <div class="slide">
+            <span class="slide-number">13</span>
+            <span class="slide-title">The Vision</span>
+            <h2>The Endgame</h2>
+            <div class="vision-text">
+                "PowerPath will become the <strong>AWS of physical infrastructure</strong> — the essential platform enabling the entire digital economy"
+            </div>
+            <div class="subtitle">Every AI model. Every autonomous vehicle. Every metaverse.<br>They all need what we build.</div>
+        </div>
+
+        <!-- Slide 14: Call to Action -->
+        <div class="slide">
+            <span class="slide-number">14</span>
+            <h2>The Data Center Land Rush<br>Is Happening NOW</h2>
+            <div class="cta-box">
+                <div class="cta-text">
+                    Limited sites. Limited power capacity. First-come-first-served.<br><br>
+                    Partner with the only team that can deliver<br>
+                    <span class="highlight">power, speed, and scale.</span>
+                </div>
+                <a href="#" class="cta-button">Let's Build the Future Together</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
