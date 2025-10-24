@@ -428,7 +428,7 @@
            WHY POWERPATH SECTION
            ============================================ */
         #why-powerpath {
-            background: url('Eden.png') center/cover no-repeat;
+            background: url('Eden.png') center top -96px/cover no-repeat;
             color: var(--text-light);
             position: relative;
             overflow: hidden;
@@ -463,7 +463,7 @@
         }
 
         .why-card {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(212, 175, 55, 0.3);
             border-radius: 15px;
@@ -476,7 +476,7 @@
         .why-card:hover {
             transform: translateY(-10px) scale(1.02);
             border-color: var(--accent-gold);
-            background: rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.1);
             box-shadow: 0 15px 40px rgba(212, 175, 55, 0.3);
         }
 
@@ -705,7 +705,25 @@
            ABOUT SECTION
            ============================================ */
         #about {
-            background: linear-gradient(135deg, var(--accent-gold) 0%, #C5A028 100%);
+            background: url('MUSTANG_pic.png') center/cover no-repeat;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #about::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.85) 0%, rgba(197, 160, 40, 0.85) 100%);
+            z-index: 0;
+        }
+
+        #about .container {
+            position: relative;
+            z-index: 1;
         }
 
         .about-content {

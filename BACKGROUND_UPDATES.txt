@@ -1,0 +1,37 @@
+BACKGROUND & TRANSPARENCY UPDATES - COMPLETE
+=============================================
+
+✅ ALL CHANGES:
+
+1. WHO WE ARE Section Background:
+   - Added MUSTANG_pic.png as background image
+   - Beautiful data center sunset rendering
+   - Gold gradient overlay (85% opacity)
+   - Text remains highly readable
+   - Stats section pops against dramatic backdrop
+
+2. WHAT WE DO Section (Why PowerPath):
+   - Navy blue floating cards MORE TRANSPARENT
+   - Changed from 0.1 opacity to 0.05 (50% more transparent)
+   - Hover state: 0.15 to 0.1 (more transparent)
+   - Background (Eden sunset) more visible through cards
+   - Eden image moved UP 1 inch (96px adjustment)
+
+3. Typography Check:
+   - Scanned all sections for typos
+   - No typos found ✓
+   - All text is clean and professional
+
+VISUAL IMPROVEMENTS:
+✅ Mustang data center image adds professional credibility
+✅ Eden sunset more visible through transparent cards
+✅ Better background positioning
+✅ Enhanced visual hierarchy
+✅ Professional, polished look
+
+FILES TO UPLOAD TO GITHUB:
+1. index.html (updated)
+2. MUSTANG_pic.png (NEW - data center sunset)
+3. hero-video.mp4 (from before)
+
+All other images already uploaded.
