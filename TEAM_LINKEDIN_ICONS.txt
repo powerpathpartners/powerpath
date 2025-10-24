@@ -1,0 +1,42 @@
+TEAM LINKEDIN ICONS - COMPLETE
+===============================
+
+✅ ADDED LINKEDIN ICONS TO ALL TEAM MEMBERS:
+
+1. Paul Hopkins:
+   - URL: https://www.linkedin.com/in/paulhopkins/
+   - Small "in" icon below email
+   - 35px circular button
+
+2. Darren Rosenlund:
+   - URL: https://www.linkedin.com/in/darren-rosenlund-a6a00911/
+   - Small "in" icon below email
+   - 35px circular button
+
+3. Neil Hopkins:
+   - URL: https://www.linkedin.com/in/neilehopkins/
+   - Small "in" icon below email
+   - 35px circular button
+
+DESIGN:
+- Matches footer LinkedIn icon style
+- 35px circles (slightly smaller than footer 45px)
+- Gold border with transparent background
+- Hover: Fills gold, lifts up, scales, glows
+- Opens in new tab
+- Positioned below email addresses
+
+HOVER EFFECTS:
+✨ Golden background fill
+✨ Lifts up and scales (1.08x)
+✨ Golden glow box-shadow
+✨ Smooth 0.3s transition
+
+RESULT:
+- Professional LinkedIn integration
+- Easy access to team profiles
+- Consistent with site design
+- Clear call-to-action for networking
+
+FILE:
+- index.html (updated)

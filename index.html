@@ -458,7 +458,7 @@
 
         .why-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 30px;
             margin-top: 40px;
         }
@@ -1088,11 +1088,37 @@
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s ease;
+            display: block;
+            margin-bottom: 10px;
         }
 
         .team-contact:hover {
             color: var(--accent-yellow);
             text-shadow: 0 0 10px rgba(212, 175, 55, 0.6), 0 0 20px rgba(212, 175, 55, 0.4);
+        }
+
+        .team-linkedin {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            background: rgba(212, 175, 55, 0.1);
+            border: 2px solid var(--accent-gold);
+            border-radius: 50%;
+            color: var(--accent-gold);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            margin-top: 5px;
+        }
+
+        .team-linkedin:hover {
+            background: var(--accent-gold);
+            color: var(--primary-dark);
+            transform: translateY(-2px) scale(1.08);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.5), 0 0 20px rgba(212, 175, 55, 0.4);
         }
 
         /* ============================================
@@ -1730,6 +1756,7 @@
                         <button class="read-more-btn" onclick="toggleBio('paulBioFull', this)">Read more</button>
                     </p>
                     <a href="mailto:paul@powerpath-partners.com" class="team-contact">paul@powerpath-partners.com</a>
+                    <a href="https://www.linkedin.com/in/paulhopkins/" target="_blank" class="team-linkedin" title="Paul Hopkins on LinkedIn">in</a>
                 </div>
 
                 <!-- TEAM MEMBER 2 - DARREN -->
@@ -1741,6 +1768,7 @@
                         Darren Rosenlund is an experienced infrastructure and energy strategist specializing in power delivery, site readiness, and utility coordination for large-scale data center and industrial projects. He has spent the past decade working with developers, utilities, and investors to transform raw land into "power-ready" campuses that accelerate timelines and increase value. Darren helps bridge the gap between land development and energy infrastructure, ensuring projects are truly energy-secured, resilient, and hyperscaler-ready.
                     </p>
                     <a href="mailto:darren@powerpath-partners.com" class="team-contact">darren@powerpath-partners.com</a>
+                    <a href="https://www.linkedin.com/in/darren-rosenlund-a6a00911/" target="_blank" class="team-linkedin" title="Darren Rosenlund on LinkedIn">in</a>
                 </div>
 
                 <!-- TEAM MEMBER 3 - NEIL -->
@@ -1752,6 +1780,7 @@
                         Neil Hopkins spent 25 years as an actor, writer, producer, and director, working on some of the biggest shows in TV history while bringing complex projects to life on stage and screen. This refined his instinct for narrative, timing, and delivery under pressure. Today, as Chief Marketing Officer of PowerPath Partners, Neil channels that same storytelling precision into strategy and growth. He helps position billion dollar projects, connect developers with hyperscalers, and ensure every deal gets the right story told in the right room.
                     </p>
                     <a href="mailto:neil@powerpath-partners.com" class="team-contact">neil@powerpath-partners.com</a>
+                    <a href="https://www.linkedin.com/in/neilehopkins/" target="_blank" class="team-linkedin" title="Neil Hopkins on LinkedIn">in</a>
                 </div>
             </div>
         </div>
