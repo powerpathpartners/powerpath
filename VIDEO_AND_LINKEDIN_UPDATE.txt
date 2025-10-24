@@ -1,0 +1,41 @@
+VIDEO & LINKEDIN UPDATE - COMPLETE
+===================================
+
+✅ ALL CHANGES:
+
+1. Hero Background - NOW VIDEO!
+   - Replaced Jerome static image with drone video
+   - Video autoplays, loops, muted, no controls
+   - Smooth, professional data center footage
+   - File: hero-video.mp4
+
+2. Background Overlays - Gradient Fades:
+   - Increased opacity by 25% (was 45%, now ~56-58%)
+   - Added gradient fades to bottom of sections
+   - No more hard edges - smooth, gradual fades
+   - Applied to:
+     * Hero (video): 56% top, 75% bottom fade
+     * Why PowerPath (Eden): 58% gradient fade
+     * Services (Wind): 58% gradient fade
+   - Clean, slick, professional look!
+
+3. LinkedIn Button - Footer:
+   - Added "Connect on LinkedIn" button
+   - Links to: www.linkedin.com/company/powerpath-partners
+   - Opens in new tab
+   - Gold border with hover effect
+   - Positioned below logo, above copyright
+
+VISUAL RESULT:
+- Dynamic video background on landing page
+- Backgrounds visible but text still readable
+- Smooth gradient fades (no hard edges)
+- Professional social media connection
+
+FILES TO UPLOAD:
+- index.html (updated)
+- hero-video.mp4 (NEW - background video)
+- All other images stay the same
+
+IMPORTANT:
+Make sure to upload hero-video.mp4 to the same folder as index.html on GitHub!
