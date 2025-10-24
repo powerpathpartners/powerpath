@@ -56,17 +56,19 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(0, 40, 85, 0.95);
+            background: rgba(0, 40, 85, 0.60);
             backdrop-filter: blur(10px);
             padding: 20px 50px;
             z-index: 1000;
             box-shadow: 0 2px 20px rgba(0,0,0,0.1);
             transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
         }
 
         nav.scrolled {
             padding: 15px 50px;
-            background: rgba(0, 40, 85, 0.98);
+            background: rgba(0, 40, 85, 0.70);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.4);
         }
 
         nav .container {
@@ -156,7 +158,7 @@
             color: var(--text-light);
             position: relative;
             overflow: hidden;
-            animation: zoomSettle 1.5s ease-out forwards;
+            animation: zoomSettle 2.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
         }
 
         @keyframes zoomSettle {
@@ -168,7 +170,7 @@
             }
         }
 
-        /* Dark overlay for readability - 85% opacity */
+        /* Dark overlay for readability - 90% opacity */
         .hero::before {
             content: '';
             position: absolute;
@@ -176,7 +178,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 40, 85, 0.85);
+            background: rgba(0, 40, 85, 0.90);
             z-index: 0;
         }
 
@@ -261,14 +263,14 @@
             height: 280px;
             margin: 80px auto 30px;
             display: block;
-            filter: drop-shadow(0 4px 20px rgba(0,0,0,0.3));
+            filter: drop-shadow(0 4px 20px rgba(0,0,0,0.3)) drop-shadow(0 0 8px rgba(212, 175, 55, 0.4));
             transition: all 0.4s ease;
             cursor: pointer;
             border-radius: 50%;
         }
 
         .hero-logo:hover {
-            filter: drop-shadow(0 0 40px rgba(212, 175, 55, 0.9));
+            filter: drop-shadow(0 0 40px rgba(212, 175, 55, 0.9)) drop-shadow(0 0 15px rgba(212, 175, 55, 0.6));
             transform: scale(1.08);
         }
 
@@ -423,7 +425,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(135deg, rgba(0, 40, 85, 0.80) 0%, rgba(0, 61, 115, 0.80) 100%);
+            background: linear-gradient(135deg, rgba(0, 40, 85, 0.90) 0%, rgba(0, 61, 115, 0.90) 100%);
             z-index: 0;
         }
 
@@ -592,7 +594,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(255, 255, 255, 0.80);
+            background: rgba(255, 255, 255, 0.90);
             z-index: 0;
         }
 
@@ -789,7 +791,7 @@
             left: -2px;
             right: -2px;
             bottom: -2px;
-            background: linear-gradient(135deg, var(--accent-gold), var(--accent-yellow));
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(255, 215, 0, 0.2));
             border-radius: 20px;
             opacity: 0;
             transition: opacity 0.4s ease;
@@ -959,7 +961,7 @@
         }
 
         /* Darren's photo zoom adjustment - zoom the image inside, not the frame */
-        .team-member:nth-child(3) .team-photo {
+        .team-member:nth-child(2) .team-photo {
             object-fit: cover;
             object-position: center 15%;
             transform: scale(1);
@@ -971,7 +973,7 @@
         }
 
         /* Keep normal hover for Darren */
-        .team-member:nth-child(3):hover .team-photo {
+        .team-member:nth-child(2):hover .team-photo {
             transform: scale(1.05);
         }
 
@@ -1103,13 +1105,13 @@
             opacity: 0.9;
             transition: all 0.4s ease;
             border-radius: 50%;
-            border: 3px solid var(--accent-gold);
-            box-shadow: 0 0 0 rgba(212, 175, 55, 0);
+            box-shadow: 0 0 0 3px var(--accent-gold), 0 0 15px rgba(212, 175, 55, 0.3);
+            cursor: pointer;
         }
 
         .footer-logo:hover {
             opacity: 1;
-            box-shadow: 0 0 30px rgba(212, 175, 55, 0.8);
+            box-shadow: 0 0 0 3px var(--accent-gold), 0 0 35px rgba(212, 175, 55, 0.6);
             transform: scale(1.05);
         }
 
@@ -1545,18 +1547,7 @@
             <p class="section-subtitle">Industry veterans with proven expertise in hyperscale data center development</p>
             
             <div class="team-grid">
-                <!-- TEAM MEMBER 1 -->
-                <div class="team-member">
-                    <img src="Neil_Blond_headshot.JPG" alt="Neil Hopkins" class="team-photo">
-                    <h3 class="team-name">Neil Hopkins</h3>
-                    <div class="team-role">Founding Partner / CMO</div>
-                    <p class="team-bio">
-                        Neil brings extensive experience in data center development and strategic partnerships. His expertise in infrastructure positioning has been instrumental in securing multi-gigawatt commitments across the U.S.
-                    </p>
-                    <a href="mailto:neil@powerpath-partners.com" class="team-contact">neil@powerpath-partners.com</a>
-                </div>
-
-                <!-- TEAM MEMBER 2 -->
+                <!-- TEAM MEMBER 1 - PAUL -->
                 <div class="team-member">
                     <img src="Paul_HS_thin.png" alt="Paul Hopkins" class="team-photo">
                     <h3 class="team-name">Paul Hopkins</h3>
@@ -1567,7 +1558,7 @@
                     <a href="mailto:paul@powerpath-partners.com" class="team-contact">paul@powerpath-partners.com</a>
                 </div>
 
-                <!-- TEAM MEMBER 3 -->
+                <!-- TEAM MEMBER 2 - DARREN -->
                 <div class="team-member">
                     <img src="Darren_HS.jpeg" alt="Darren Rosenlund" class="team-photo">
                     <h3 class="team-name">Darren Rosenlund</h3>
@@ -1576,6 +1567,17 @@
                         Darren focuses on power strategy and transmission partnerships, ensuring campus reliability and speed-to-market. His technical expertise enables rapid site positioning for hyperscale deployment.
                     </p>
                     <a href="mailto:darren@powerpath-partners.com" class="team-contact">darren@powerpath-partners.com</a>
+                </div>
+
+                <!-- TEAM MEMBER 3 - NEIL -->
+                <div class="team-member">
+                    <img src="Neil_Blond_headshot.JPG" alt="Neil Hopkins" class="team-photo">
+                    <h3 class="team-name">Neil Hopkins</h3>
+                    <div class="team-role">Founding Partner / CMO</div>
+                    <p class="team-bio">
+                        Neil brings extensive experience in data center development and strategic partnerships. His expertise in infrastructure positioning has been instrumental in securing multi-gigawatt commitments across the U.S.
+                    </p>
+                    <a href="mailto:neil@powerpath-partners.com" class="team-contact">neil@powerpath-partners.com</a>
                 </div>
             </div>
         </div>
@@ -1600,7 +1602,7 @@
     <!-- FOOTER -->
     <footer>
         <div class="container">
-            <img src="PPP_logo_transparent_bg.png" alt="PowerPath Partners Logo" class="footer-logo">
+            <img src="PPP_logo_transparent_bg.png" alt="PowerPath Partners Logo" class="footer-logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
             <p>&copy; 2025 PowerPath Partners. From Dirt to Data.</p>
         </div>
     </footer>

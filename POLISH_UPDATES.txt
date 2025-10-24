@@ -1,0 +1,50 @@
+POWERPATH POLISH UPDATES - COMPLETE
+====================================
+
+✅ ALL CHANGES:
+
+1. Background Photo Transparency:
+   - Changed ALL backgrounds from 85%/80% to 90% opacity
+   - Jerome (hero), Eden (Why PowerPath), Wind (Services)
+   - Images are slightly more visible now
+
+2. Landing Page Animation:
+   - Softened zoom-settle effect (was jerky, now smooth)
+   - Changed from 1.5s ease-out to 2.5s cubic-bezier
+   - Smooth landing, not a slam!
+
+3. Footer Logo:
+   - Gold border now correctly borders the navy circle (3px outline)
+   - Softer gold glow (15px ambient, grows to 35px on hover)
+   - NOW CLICKABLE - scrolls to top/home page
+   - Cursor changes to pointer
+
+4. Header/Navigation:
+   - Now 60% transparent (was 95% opaque)
+   - Can see Jerome background through it
+   - Light transparent gold bottom border
+   - Scrolled state is 70% transparent
+
+5. Hero Landing Page Logo:
+   - Tiny slight gold glow even when settled (8px ambient)
+   - Grows to large glow on hover (40px + 15px)
+   - Smooth transition
+
+6. Team Order:
+   - NEW ORDER: Paul (CRO), Darren (CPO), Neil (CMO)
+   - Left to right: Paul → Darren → Neil
+
+7. Case Studies Hover:
+   - Yellow glow reduced to 20% transparency (was 100%)
+   - Text remains readable when hovering
+   - Subtle gold accent instead of blinding yellow
+
+RESULT:
+- Smoother animations throughout
+- Better readability on all sections
+- Clickable footer logo
+- Transparent header showing background
+- Professional polish on all interactive elements
+
+FILE TO DOWNLOAD:
+- index.html
