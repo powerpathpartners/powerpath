@@ -1,0 +1,28 @@
+POSITION ADJUSTMENTS - COMPLETE
+================================
+
+✅ CHANGES:
+
+1. Our Process Background Image:
+   - Moved UP 2 inches (192px)
+   - Position: center top -192px
+   - More sky/sunset visible
+   - Data center better positioned in frame
+
+2. Tenant Development Title (and all service titles):
+   - Increased top margin: 30px → 50px
+   - Now has 20px MORE clearance from numbers
+   - "Tenant Development" no longer overlaps "02"
+   - "Site Positioning" clears "01"
+   - "Execution & Delivery" clears "03"
+   - Clean, professional spacing
+
+VISUAL RESULT:
+✅ Our Process: More dramatic sky/sunset visible
+✅ Service Cards: Clear separation between numbers and titles
+✅ No text overlap anywhere
+✅ Better visual hierarchy
+✅ Professional spacing throughout
+
+FILE:
+- index.html (updated)
