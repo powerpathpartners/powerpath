@@ -1,0 +1,33 @@
+OUR PROCESS IMAGE - MOVED DOWN 8 INCHES
+========================================
+
+✅ CORRECTION:
+
+Background Position:
+- Was: center bottom 384px (moved up 4")
+- Now: center bottom -768px (moved down 8")
+- NEGATIVE value = moves image DOWN (shows lower part)
+- 768px = 8 inches at 96 DPI
+
+Effect:
+- Image shifted DOWN significantly
+- Shows MORE of the BUILDING
+- Less sky visible
+- Building more prominent in frame
+- Still full width (cover)
+
+Visual Result:
+✅ Image moved DOWN 8 inches
+✅ Building more prominent
+✅ Lower portion of image visible
+✅ Less sky, more forest and building
+✅ Full width coverage maintained
+
+Technical:
+- background-position: center bottom -768px
+- Negative value from bottom = image moves down
+- Shows lower/bottom portion of image
+- Building should be very visible now
+
+FILE:
+- index.html (updated)
