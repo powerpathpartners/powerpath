@@ -1,0 +1,24 @@
+OUR PROCESS IMAGE POSITION - CORRECTED
+=======================================
+
+✅ CORRECTION:
+
+Our Process Background Image:
+- NOW moved UP 4 inches (384px)
+- Position: center top -384px
+- Shows MORE of the upper part of the image
+- More sky, mountains, and sunset visible
+- Data center positioned lower in the frame
+
+TECHNICAL:
+- Negative value (-384px) moves image UP
+- 384px = 4 inches at 96 DPI
+- Background-size: 110% (zoomed)
+
+RESULT:
+✅ Image moved UPWARD as requested
+✅ More dramatic sky/sunset visible
+✅ Better composition in the section
+
+FILE:
+- index.html (updated)
