@@ -1,0 +1,20 @@
+DARREN'S BIO UPDATE - COMPLETE
+===============================
+
+✅ UPDATED TEXT:
+
+OLD BIO (short):
+"Darren focuses on power strategy and transmission partnerships, ensuring campus reliability and speed-to-market. His technical expertise enables rapid site positioning for hyperscale deployment."
+
+NEW BIO (comprehensive):
+"Darren Rosenlund is an experienced infrastructure and energy strategist specializing in power delivery, site readiness, and utility coordination for large-scale data center and industrial projects. He has spent the past decade working with developers, utilities, and investors to transform raw land into "power-ready" campuses that accelerate timelines and increase value. Darren helps bridge the gap between land development and energy infrastructure, ensuring projects are truly energy-secured, resilient, and hyperscaler-ready."
+
+RESULT:
+- More detailed and comprehensive
+- Highlights decade of experience
+- Emphasizes "power-ready" campus transformation
+- Shows bridging role between land and energy
+- Professional and authoritative tone
+
+FILE:
+- index.html (updated)
