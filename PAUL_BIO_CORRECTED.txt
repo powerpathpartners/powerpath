@@ -1,0 +1,27 @@
+PAUL'S BIO - CORRECTED VERSION
+===============================
+
+✅ UPDATED WITH CORRECT STORY:
+
+SHORT VERSION (always visible):
+"Paul Hopkins is CEO & Co-Founder of OLH Ventures, a Palo Alto-based firm that powers the AI-infrastructure era by delivering hyperscale site development and power-first real estate. A legend in the industry, Paul closed Google's first colocation purchase in 1998, dealing directly with Sergey Brin and Larry Page."
+
+EXPANDABLE SECTION (click "Read more"):
+"With more than 30 years in cloud infrastructure and hyperscale real estate, he specializes in site acquisition, grid engagement, and leasing for GPU-intensive deployments and has worked alongside tech giants including Google, Meta, AWS, Microsoft, Nvidia, CoreWeave, Oracle, Apple and NeoClouds. At OLH Ventures, he doesn't just close deals, he builds the physical foundation of global AI infrastructure, one data-factory at a time."
+
+KEY HIGHLIGHTS:
+✨ "A legend in the industry"
+✨ Google's FIRST colocation purchase (1998)
+✨ Worked directly with Sergey Brin & Larry Page
+✨ 30+ years experience
+✨ All major tech giants: Google, Meta, AWS, Microsoft, Nvidia, etc.
+✨ "One data-factory at a time"
+
+RESULT:
+- Legendary Google origin story in opening
+- Impressive client list
+- Expandable for full details
+- Matches other bio lengths when collapsed
+
+FILE:
+- index.html (updated)

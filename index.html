@@ -157,7 +157,7 @@
             color: var(--text-light);
             position: relative;
             overflow: hidden;
-            background: url('Jerome_Background.png') center/cover no-repeat;
+            background: #001427;
         }
 
         .hero-video {
@@ -263,7 +263,18 @@
             z-index: 2;
             max-width: 900px;
             padding: 20px;
-            animation: fadeInUp 1s ease-out;
+            animation: fadeInUpSettle 3s ease-out;
+        }
+
+        @keyframes fadeInUpSettle {
+            0% {
+                opacity: 0;
+                transform: translateY(60px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .hero-logo {
@@ -1009,6 +1020,47 @@
             margin-bottom: 20px;
         }
 
+        .team-bio-short {
+            display: block;
+        }
+
+        .team-bio-full {
+            display: none;
+            margin-top: 15px;
+        }
+
+        .team-bio-full.expanded {
+            display: block;
+        }
+
+        .read-more-btn {
+            display: inline-block;
+            margin-top: 10px;
+            color: var(--accent-gold);
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            background: none;
+            padding: 0;
+        }
+
+        .read-more-btn:hover {
+            color: var(--accent-yellow);
+            transform: translateX(5px);
+        }
+
+        .read-more-btn::after {
+            content: ' →';
+            transition: transform 0.3s ease;
+            display: inline-block;
+        }
+
+        .read-more-btn.expanded::after {
+            content: ' ↑';
+        }
+
         .team-contact {
             font-size: 14px;
             color: var(--accent-gold);
@@ -1130,22 +1182,25 @@
         }
 
         .linkedin-button {
-            display: inline-block;
-            padding: 12px 30px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
             background: rgba(255, 255, 255, 0.1);
             border: 2px solid var(--accent-gold);
-            border-radius: 50px;
-            color: var(--text-light);
+            border-radius: 50%;
+            color: var(--accent-gold);
             text-decoration: none;
             font-weight: 600;
-            font-size: 16px;
+            font-size: 22px;
             transition: all 0.3s ease;
         }
 
         .linkedin-button:hover {
             background: var(--accent-gold);
             color: var(--primary-dark);
-            transform: translateY(-2px);
+            transform: translateY(-3px) scale(1.1);
             box-shadow: 0 5px 20px rgba(212, 175, 55, 0.5);
         }
 
@@ -1641,7 +1696,13 @@
                     <h3 class="team-name">Paul Hopkins</h3>
                     <div class="team-role">Founding Partner / CRO</div>
                     <p class="team-bio">
-                        Paul specializes in hyperscale leasing and direct tenant negotiations. He has led deals worth hundreds of millions, establishing long-term relationships with major cloud providers and hyperscalers.
+                        <span class="team-bio-short">
+                            Paul Hopkins is CEO & Co-Founder of OLH Ventures, a Palo Alto-based firm that powers the AI-infrastructure era by delivering hyperscale site development and power-first real estate. A legend in the industry, Paul closed Google's first colocation purchase in 1998, dealing directly with Sergey Brin and Larry Page.
+                        </span>
+                        <span class="team-bio-full" id="paulBioFull">
+                            With more than 30 years in cloud infrastructure and hyperscale real estate, he specializes in site acquisition, grid engagement, and leasing for GPU-intensive deployments and has worked alongside tech giants including Google, Meta, AWS, Microsoft, Nvidia, CoreWeave, Oracle, Apple and NeoClouds. At OLH Ventures, he doesn't just close deals, he builds the physical foundation of global AI infrastructure, one data-factory at a time.
+                        </span>
+                        <button class="read-more-btn" onclick="toggleBio('paulBioFull', this)">Read more</button>
                     </p>
                     <a href="mailto:paul@powerpath-partners.com" class="team-contact">paul@powerpath-partners.com</a>
                 </div>
@@ -1692,7 +1753,7 @@
         <div class="container">
             <img src="PPP_logo_transparent_bg.png" alt="PowerPath Partners Logo" class="footer-logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
             <div class="footer-social">
-                <a href="https://www.linkedin.com/company/powerpath-partners" target="_blank" class="linkedin-button">Connect on LinkedIn</a>
+                <a href="https://www.linkedin.com/company/powerpath-partners" target="_blank" class="linkedin-button" title="Connect on LinkedIn">in</a>
             </div>
             <p>&copy; 2025 PowerPath Partners. From Dirt to Data.</p>
         </div>
@@ -1834,6 +1895,22 @@
                 menuToggle.classList.remove('active');
             });
         });
+
+        // ==========================================
+        // TOGGLE BIO EXPANSION
+        // ==========================================
+        function toggleBio(bioId, button) {
+            const bioFull = document.getElementById(bioId);
+            bioFull.classList.toggle('expanded');
+            
+            if (bioFull.classList.contains('expanded')) {
+                button.textContent = 'Read less';
+                button.classList.add('expanded');
+            } else {
+                button.textContent = 'Read more';
+                button.classList.remove('expanded');
+            }
+        }
     </script>
 </body>
 </html>
