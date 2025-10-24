@@ -1,0 +1,36 @@
+OUR PROCESS BACKGROUND - COMPLETE
+==================================
+
+✅ CHANGE:
+
+Our Process Section Background:
+- Added stunning data center in nature image
+- Beautiful valley sunset with forest and data center
+- Shows the vision: technology harmonizing with nature
+- Zoomed to 110% for full coverage (fills section)
+- Background position: center center
+
+Overlay:
+- Gold gradient overlay (85% opacity)
+- Maintains brand colors
+- Text remains highly readable
+- rgba(212, 175, 55, 0.85) to rgba(197, 160, 40, 0.85)
+
+Visual Effect:
+- Dramatic backdrop for "From Dirt to Data" message
+- Data center floating in pristine wilderness
+- Symbolizes transformation journey
+- Perfect thematic match for the process steps
+
+RESULT:
+✅ Stunning background imagery
+✅ Zoomed to fill section completely
+✅ Gold overlay maintains brand consistency
+✅ Text clearly readable
+✅ Powerful visual metaphor
+
+FILES TO UPLOAD:
+1. index.html (updated)
+2. our_process_background.png (NEW - data center in nature)
+3. MUSTANG_pic.png (from before)
+4. hero-video.mp4 (from before)
