@@ -1,0 +1,32 @@
+VISIBILITY UPDATES - COMPLETE
+==============================
+
+✅ CHANGES:
+
+1. Hero Statement Text:
+   - Font size increased by 25%
+   - Was 32px → Now 40px
+   - "We don't just develop land."
+   - "We power the digital future."
+   - Much more prominent!
+
+2. Background Image Overlays:
+   - Reduced opacity by 50% on ALL backgrounds
+   - Was 90% → Now 45%
+   - Applied to:
+     * Jerome (Hero section)
+     * Eden (Why PowerPath section)
+     * Wind turbines (Services section)
+
+RESULT:
+- Background images MUCH more visible (55% more visible!)
+- Hero text is larger and more impactful
+- Jerome waterfall, Eden landscape, and wind turbines clearly visible
+- Text still readable with shadows and contrast
+
+VISUAL IMPACT:
+- Before: Heavy dark overlay, images barely visible
+- After: Beautiful background photos shine through, text still crisp
+
+FILE:
+- index.html (updated)
