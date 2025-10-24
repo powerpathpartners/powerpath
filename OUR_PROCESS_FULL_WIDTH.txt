@@ -1,0 +1,35 @@
+OUR PROCESS - FULL WIDTH WITH BUILDING VISIBLE
+===============================================
+
+✅ CHANGE:
+
+Background Image Display:
+- background-size: cover (fills width)
+- background-position: center bottom
+- Building anchored to BOTTOM of section
+- Image fills full WIDTH of page
+- Minimum height: 500px to ensure visibility
+
+How It Works:
+- "cover" = fills width completely (zoomed wide)
+- "center bottom" = aligns building to bottom edge
+- Building stays visible at bottom
+- Image expands to fill section width
+- Top of image (sky) may be cropped
+- Bottom of image (building) ALWAYS visible
+
+Visual Result:
+✅ Full page width coverage
+✅ Building fully visible at bottom
+✅ No side letterboxing
+✅ Dramatic wide presentation
+✅ Gold overlay maintains brand
+
+Trade-off:
+- Width: FULL (fills page) ✅
+- Building: VISIBLE at bottom ✅
+- Top sky: May crop slightly if section is short
+- Ideal balance between width and building visibility
+
+FILE:
+- index.html (updated)
