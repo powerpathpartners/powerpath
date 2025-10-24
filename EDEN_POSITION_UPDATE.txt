@@ -1,0 +1,18 @@
+EDEN BACKGROUND POSITION UPDATE
+================================
+
+✅ CHANGE:
+
+Why PowerPath Section Background:
+- Moved Eden.png UP an additional 4.5 inches
+- Was: -96px (1 inch up)
+- Now: -528px (5.5 inches up total)
+- Change: +432px upward adjustment
+
+RESULT:
+- Different part of Eden sunset visible
+- Better framing for the section
+- More sky/sunset visible through transparent cards
+
+FILE:
+- index.html (updated)
