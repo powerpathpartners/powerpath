@@ -1,0 +1,31 @@
+HERO VIDEO RE-UPLOAD & PAUL'S BIO EXTENSION
+============================================
+
+✅ CHANGES:
+
+1. Hero Video Re-Uploaded:
+   - Fresh copy of hero-video.mp4 ready
+   - File: hero-video.mp4 (in outputs folder)
+   - Upload this alongside index.html to GitHub
+
+2. Paul's Bio Extended Before "Read More":
+
+NOW SHOWS (before clicking Read more):
+"Paul Hopkins is CEO & Co-Founder of OLH Ventures, a Palo Alto-based firm that powers the AI-infrastructure era by delivering hyperscale site development and power-first real estate. A legend in the industry, Paul closed Google's first colocation purchase in 1998, dealing directly with Sergey Brin and Larry Page. With more than 30 years in cloud infrastructure and hyperscale real estate, he specializes in site acquisition, grid engagement, and leasing for GPU-intensive deployments and has worked alongside tech giants including Google, Meta, AWS, Microsoft, Nvidia, CoreWeave, Oracle, Apple and NeoClouds."
+
+HIDDEN UNTIL "Read more" clicked:
+"At OLH Ventures, he doesn't just close deals, he builds the physical foundation of global AI infrastructure, one data-factory at a time."
+
+RESULT:
+- Much longer initial bio (15+ lines instead of 8)
+- Shows full credentials upfront
+- Only hides the final impactful statement
+- More balanced with other team bios
+- Click "Read more" reveals powerful closing
+
+FILES TO UPLOAD TO GITHUB:
+1. index.html (updated)
+2. hero-video.mp4 (fresh copy ready)
+
+IMPORTANT:
+Make sure BOTH files are in the same folder on GitHub!
