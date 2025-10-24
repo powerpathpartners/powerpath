@@ -1,0 +1,26 @@
+QUICK HERO UPDATE
+==================
+
+✅ CHANGES:
+
+1. "From Dirt to Data" - REMOVED (hidden)
+
+2. Main Hero Text - UPDATED:
+   - Now on TWO separate lines right below logo
+   - Line 1: "We don't just develop land."
+   - Line 2: "We power the digital future."
+   - Font size increased to 32px (was 24px)
+   - Font weight: 700 (bold)
+   - Both lines have text shadow for better visibility
+   - Positioned directly below logo
+
+RESULT:
+Logo
+↓
+"We don't just develop land."
+"We power the digital future."
+↓
+[Let's Build Together button]
+
+FILE TO DOWNLOAD:
+- index.html
