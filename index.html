@@ -158,16 +158,6 @@
             color: var(--text-light);
             position: relative;
             overflow: hidden;
-            animation: zoomSettle 2.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-        }
-
-        @keyframes zoomSettle {
-            from {
-                background-size: 110%;
-            }
-            to {
-                background-size: cover;
-            }
         }
 
         /* Dark overlay for readability - 90% opacity */
@@ -414,10 +404,6 @@
             overflow: hidden;
         }
 
-        #why-powerpath.active {
-            animation: zoomSettle 1.5s ease-out forwards;
-        }
-
         #why-powerpath::before {
             content: '';
             position: absolute;
@@ -581,10 +567,6 @@
             background: url('data_center_wind.png') center/cover no-repeat;
             position: relative;
             overflow: hidden;
-        }
-
-        #services.active {
-            animation: zoomSettle 1.5s ease-out forwards;
         }
 
         #services::before {
@@ -1105,13 +1087,13 @@
             opacity: 0.9;
             transition: all 0.4s ease;
             border-radius: 50%;
-            box-shadow: 0 0 0 3px var(--accent-gold), 0 0 15px rgba(212, 175, 55, 0.3);
+            filter: drop-shadow(0 0 6px rgba(212, 175, 55, 0.5));
             cursor: pointer;
         }
 
         .footer-logo:hover {
             opacity: 1;
-            box-shadow: 0 0 0 3px var(--accent-gold), 0 0 35px rgba(212, 175, 55, 0.6);
+            filter: drop-shadow(0 0 25px rgba(212, 175, 55, 0.8));
             transform: scale(1.05);
         }
 
