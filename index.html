@@ -171,11 +171,6 @@
             transform: translateX(-50%) translateY(-50%);
             z-index: -1;
             object-fit: cover;
-            transition: opacity 2s ease-out;
-        }
-
-        .hero-video.fade-out {
-            opacity: 0;
         }
 
         /* Dark overlay for readability with gradient fade - 56% opacity */
@@ -1365,7 +1360,7 @@
     <!-- HERO SECTION -->
     <section class="hero">
         <!-- Background Video -->
-        <video autoplay muted playsinline class="hero-video" id="heroVideo">
+        <video autoplay muted loop playsinline class="hero-video" id="heroVideo">
             <source src="hero-video.mp4" type="video/mp4">
         </video>
         
@@ -1668,7 +1663,7 @@
                     <h3 class="team-name">Neil Hopkins</h3>
                     <div class="team-role">Founding Partner / CMO</div>
                     <p class="team-bio">
-                        Neil brings extensive experience in data center development and strategic partnerships. His expertise in infrastructure positioning has been instrumental in securing multi-gigawatt commitments across the U.S.
+                        Neil Hopkins spent 25 years as an actor, writer, producer, and director, working on some of the biggest shows in TV history while bringing complex projects to life on stage and screen. This refined his instinct for narrative, timing, and delivery under pressure. Today, as Chief Marketing Officer of PowerPath Partners, Neil channels that same storytelling precision into strategy and growth. He helps position billion dollar projects, connect developers with hyperscalers, and ensure every deal gets the right story told in the right room.
                     </p>
                     <a href="mailto:neil@powerpath-partners.com" class="team-contact">neil@powerpath-partners.com</a>
                 </div>
@@ -1714,17 +1709,6 @@
             const scrolled = (winScroll / height) * 100;
             document.getElementById('progressBar').style.width = scrolled + '%';
         });
-
-        // ==========================================
-        // HERO VIDEO FADE TO STILL IMAGE
-        // ==========================================
-        const heroVideo = document.getElementById('heroVideo');
-        if (heroVideo) {
-            heroVideo.addEventListener('ended', function() {
-                // Fade out video to reveal background image
-                heroVideo.classList.add('fade-out');
-            });
-        }
 
         // ==========================================
         // NAVIGATION SCROLL EFFECT
