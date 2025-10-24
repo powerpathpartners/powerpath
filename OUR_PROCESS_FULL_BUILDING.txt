@@ -1,0 +1,33 @@
+OUR PROCESS - FULL BUILDING VISIBLE
+====================================
+
+✅ CHANGE:
+
+Background Image Display:
+- Changed from: cover (cropped)
+- Changed to: contain (shows entire image)
+- Position: center center
+- Building now fully visible at bottom
+- No cropping
+
+Technical Changes:
+- background-size: contain (fits entire image)
+- background-position: center center
+- background-color: #1a1a1a (dark fallback for letterboxing)
+- No zoom or offset
+
+Visual Result:
+✅ Entire data center building visible
+✅ Full image shown (top to bottom)
+✅ No cropping of any elements
+✅ May have letterboxing (dark bars) on sides if needed
+✅ Gold overlay still applies
+
+Note:
+- "contain" ensures the ENTIRE image is visible
+- Image will fit within the section
+- May show dark background on sides if aspect ratio differs
+- Building is now completely visible at bottom
+
+FILE:
+- index.html (updated)
