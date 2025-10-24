@@ -157,7 +157,8 @@
             color: var(--text-light);
             position: relative;
             overflow: hidden;
-            background: #001427;
+            background: url('Jerome_Background.png') center/cover no-repeat;
+            background-color: #001427;
         }
 
         .hero-video {
@@ -169,7 +170,7 @@
             width: auto;
             height: auto;
             transform: translateX(-50%) translateY(-50%);
-            z-index: -1;
+            z-index: 1;
             object-fit: cover;
         }
 
@@ -187,7 +188,7 @@
                 rgba(0, 40, 85, 0.56) 70%,
                 rgba(0, 40, 85, 0.75) 100%
             );
-            z-index: 0;
+            z-index: 2;
         }
 
         /* Subtle waterfall animation overlay */
@@ -207,7 +208,7 @@
             );
             animation: waterFlow 3s ease-in-out infinite;
             pointer-events: none;
-            z-index: 0;
+            z-index: 2;
             opacity: 0.4;
         }
 
@@ -231,7 +232,7 @@
             height: 100%;
             overflow: hidden;
             pointer-events: none;
-            z-index: 1;
+            z-index: 3;
         }
 
         .particle {
@@ -260,7 +261,7 @@
 
         .hero-content {
             position: relative;
-            z-index: 2;
+            z-index: 10;
             max-width: 900px;
             padding: 20px;
             animation: fadeInUpSettle 3s ease-out;
@@ -1700,7 +1701,7 @@
                             Paul Hopkins is CEO & Co-Founder of OLH Ventures, a Palo Alto-based firm that powers the AI-infrastructure era by delivering hyperscale site development and power-first real estate. A legend in the industry, Paul closed Google's first colocation purchase in 1998, dealing directly with Sergey Brin and Larry Page. With more than 30 years in cloud infrastructure and hyperscale real estate, he specializes in site acquisition, grid engagement, and leasing for GPU-intensive deployments and has worked alongside tech giants including Google, Meta, AWS, Microsoft, Nvidia, CoreWeave, Oracle, Apple and NeoClouds.
                         </span>
                         <span class="team-bio-full" id="paulBioFull">
-                            At OLH Ventures, he doesn't just close deals, he builds the physical foundation of global AI infrastructure, one data-factory at a time.
+                            At PowerPath Partners, he doesn't just close deals, he builds the physical foundation of global AI infrastructure, one data-factory at a time.
                         </span>
                         <button class="read-more-btn" onclick="toggleBio('paulBioFull', this)">Read more</button>
                     </p>
