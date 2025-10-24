@@ -144,11 +144,11 @@
         }
 
         /* ============================================
-           HERO SECTION WITH PARTICLES
+           HERO SECTION WITH BACKGROUND IMAGE
            ============================================ */
         .hero {
             height: 100vh;
-            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-blue) 100%);
+            background: url('Jerome_Background.png') center/cover no-repeat;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -156,6 +156,18 @@
             color: var(--text-light);
             position: relative;
             overflow: hidden;
+        }
+
+        /* Dark overlay for readability - 75% opacity */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 40, 85, 0.75);
+            z-index: 0;
         }
 
         /* Animated particles background */
@@ -167,11 +179,12 @@
             height: 100%;
             overflow: hidden;
             pointer-events: none;
+            z-index: 1;
         }
 
         .particle {
             position: absolute;
-            background: rgba(212, 175, 55, 0.3);
+            background: rgba(212, 175, 55, 0.2);
             border-radius: 50%;
             animation: float 20s infinite;
         }
@@ -193,21 +206,9 @@
             }
         }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(255, 215, 0, 0.15) 0%, transparent 50%);
-        }
-
         .hero-content {
             position: relative;
-            z-index: 1;
+            z-index: 2;
             max-width: 900px;
             padding: 20px;
             animation: fadeInUp 1s ease-out;
@@ -1083,7 +1084,8 @@
         <div class="hero-content fade-in">
             <h1>PowerPath Partners</h1>
             <div class="tagline">From Dirt to Data</div>
-            <p>Transforming land into hyperscale data center infrastructure. We connect power, property, and partnerships to build the backbone of the digital economy.</p>
+            <p style="font-size: 24px; font-weight: 600; margin-bottom: 25px;">We don't just develop land. We power the digital future.</p>
+            <p>We turn land into power. We turn power into projects. We turn projects into data centers.</p>
             <a href="#contact" class="cta-button"><span>Let's Build Together</span></a>
         </div>
     </section>
