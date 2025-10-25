@@ -1,0 +1,28 @@
+IMMEDIATE ACTION REQUIRED:
+
+1. Add Contact Form (Priority 1)
+   - Name
+   - Company
+   - Role/Title
+   - Email
+   - Phone (optional)
+   - Project Type: [Dropdown]
+     • Land Development
+     • Power Infrastructure
+     • Tenant Representation
+     • Partnership Opportunity
+   - Project Size/MW Capacity
+   - Message/Project Details
+   - "Get Started" CTA button
+
+2. Add Multiple CTAs Throughout Site
+   - Hero: "Schedule Consultation" button
+   - After Why PowerPath: "Start Your Project"
+   - After Case Study: "See How We Can Help You"
+   - Services cards: "Learn More" links
+   - Sticky footer CTA bar on scroll
+
+3. Create Lead Magnet
+   - "The Hyperscaler's Guide to Power-Ready Sites"
+   - "Data Center Site Selection Checklist"
+   - Gated PDF download in exchange for email
