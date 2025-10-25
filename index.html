@@ -56,19 +56,21 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: transparent;
-            backdrop-filter: none;
+            background: rgba(0, 40, 85, 0.20);
+            backdrop-filter: blur(10px);
             padding: 20px 50px;
             z-index: 1000;
             box-shadow: none;
             transition: all 0.3s ease;
-            border-bottom: none;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.8);
+            box-shadow: 0 1px 20px rgba(212, 175, 55, 0.4);
         }
 
         nav.scrolled {
             padding: 15px 50px;
-            background: transparent;
-            border-bottom: none;
+            background: rgba(0, 40, 85, 0.20);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.8);
+            box-shadow: 0 1px 20px rgba(212, 175, 55, 0.4);
         }
 
         nav .container {
@@ -99,7 +101,7 @@
         nav ul {
             display: flex;
             list-style: none;
-            gap: 40px;
+            gap: 25px;
         }
 
         nav a {
@@ -336,8 +338,8 @@
         .hero-statement {
             font-size: 40px;
             font-weight: 700;
-            line-height: 1.5;
-            margin-bottom: 15px;
+            line-height: 1.2;
+            margin-bottom: 5px;
             text-shadow: 0 3px 15px rgba(0,0,0,0.4);
             color: var(--text-light);
         }
@@ -448,41 +450,23 @@
 
         /* Scroll Indicator */
         .scroll-indicator {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            text-align: center;
-            color: var(--accent-gold);
-            font-weight: 600;
-            font-size: 12px;
-            z-index: 100;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            opacity: 0;
-            pointer-events: none;
+            display: none;
         }
 
         .scroll-indicator.visible {
-            opacity: 1;
-            pointer-events: all;
+            display: none;
         }
 
         .scroll-indicator:hover {
-            transform: translateX(-50%) scale(1.1);
+            display: none;
         }
 
         .scroll-indicator span {
-            display: block;
-            margin-bottom: 5px;
-            text-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+            display: none;
         }
 
         .scroll-arrow {
-            font-size: 20px;
-            animation: bounce 2s infinite;
-            color: var(--accent-gold);
-            text-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
+            display: none;
         }
 
         @keyframes bounce {
@@ -2014,16 +1998,12 @@
             <div class="hero-statement">We power the digital future.</div>
             
             <!-- PRIORITY 1: Hero Subheadline for clarity -->
-            <p class="hero-subheadline">Turning raw land into hyperscale-ready campuses with secured power and committed tenants.</p>
+            <p class="hero-subheadline">Turning raw land into hyperscale-ready campuses<br>with secured power and committed tenants.</p>
             
             <!-- PRIORITY 1: Primary CTA Button -->
             <a href="#contact" class="hero-cta-button">
                 <span>Schedule Consultation</span>
             </a>
-        </div>
-        <div class="scroll-indicator" id="scrollIndicator" onclick="scrollToNextSection()">
-            <span>Scroll to Explore</span>
-            <div class="scroll-arrow">↓</div>
         </div>
     </section>
 
