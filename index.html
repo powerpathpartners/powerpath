@@ -282,7 +282,7 @@
         .hero-logo {
             width: 280px;
             height: 280px;
-            margin: 80px auto 30px;
+            margin: 40px auto 20px;
             display: block;
             filter: drop-shadow(0 4px 20px rgba(0,0,0,0.3)) drop-shadow(0 0 8px rgba(212, 175, 55, 0.4));
             transition: all 0.4s ease;
@@ -383,16 +383,23 @@
         /* Scroll Indicator */
         .scroll-indicator {
             position: fixed;
-            bottom: 30px;
+            bottom: 20px;
             left: 50%;
             transform: translateX(-50%);
             text-align: center;
             color: var(--accent-gold);
             font-weight: 600;
-            font-size: 16px;
+            font-size: 12px;
             z-index: 100;
             cursor: pointer;
             transition: all 0.3s ease;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .scroll-indicator.visible {
+            opacity: 1;
+            pointer-events: all;
         }
 
         .scroll-indicator:hover {
@@ -401,12 +408,12 @@
 
         .scroll-indicator span {
             display: block;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
             text-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
         }
 
         .scroll-arrow {
-            font-size: 32px;
+            font-size: 20px;
             animation: bounce 2s infinite;
             color: var(--accent-gold);
             text-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
@@ -1355,9 +1362,13 @@
            RESPONSIVE DESIGN
            ============================================ */
         @media (max-width: 768px) {
+            /* Hero Section Mobile */
             .hero {
                 align-items: flex-start;
                 padding-top: 100px;
+                min-height: 100vh;
+                background-size: cover;
+                background-position: center center;
             }
 
             .hero-content {
@@ -1365,32 +1376,45 @@
             }
 
             .hero-logo {
-                width: 200px;
-                height: 200px;
-                margin: 20px auto 20px;
+                width: 180px;
+                height: 180px;
+                margin: 15px auto 15px;
             }
 
             .hero-statement {
-                font-size: 28px;
-                margin-bottom: 12px;
+                font-size: 24px;
+                margin-bottom: 10px;
+                line-height: 1.3;
+            }
+
+            .scroll-indicator {
+                font-size: 10px;
+                bottom: 15px;
+            }
+
+            .scroll-arrow {
+                font-size: 16px;
             }
 
             .cta-button {
                 margin-bottom: 40px;
+                font-size: 16px;
+                padding: 14px 35px;
             }
 
             .hero h1 {
-                font-size: 42px;
+                font-size: 36px;
             }
 
             .hero .tagline {
-                font-size: 22px;
+                font-size: 20px;
             }
 
             .hero p {
                 font-size: 16px;
             }
 
+            /* Navigation Mobile */
             nav {
                 padding: 15px 20px;
             }
@@ -1429,30 +1453,147 @@
                 font-size: 16px;
             }
 
+            /* Section Backgrounds - Full Coverage Mobile */
+            section {
+                min-height: 100vh;
+                background-size: cover !important;
+                background-position: center center !important;
+                background-attachment: scroll;
+            }
+
+            #why-powerpath {
+                background-position: center center !important;
+            }
+
+            #our-process {
+                background-position: center center !important;
+            }
+
+            #services {
+                background-position: center center !important;
+            }
+
+            #about {
+                background-position: center center !important;
+            }
+
+            /* Typography Mobile */
             .section-title {
-                font-size: 36px;
+                font-size: 32px;
+                margin-bottom: 15px;
             }
 
-            .case-studies-grid {
-                grid-template-columns: 1fr;
+            .section-subtitle {
+                font-size: 16px;
             }
 
-            .team-grid {
+            .about-content p {
+                font-size: 16px;
+                line-height: 1.6;
+            }
+
+            .about-content p:last-of-type {
+                font-size: 14px;
+                white-space: normal;
+            }
+
+            /* Grids Mobile */
+            .case-studies-grid,
+            .team-grid,
+            .services-grid,
+            .market-grid,
+            .why-grid {
                 grid-template-columns: 1fr;
+                gap: 20px;
             }
 
             .case-study-meta {
                 grid-template-columns: 1fr;
             }
 
-            .services-grid,
-            .market-grid,
-            .why-grid {
+            /* Cards Mobile */
+            .why-card,
+            .service-card,
+            .market-card {
+                padding: 25px 20px;
+            }
+
+            .service-card h3 {
+                font-size: 20px;
+                margin-top: 35px;
+            }
+
+            .service-number {
+                font-size: 48px;
+            }
+
+            /* Process Section Mobile */
+            .process-line {
+                font-size: 20px;
+                padding: 20px 15px;
+            }
+
+            /* Team Section Mobile */
+            .team-photo {
+                width: 150px;
+                height: 150px;
+            }
+
+            .team-bio {
+                font-size: 14px;
+            }
+
+            /* Stats Mobile */
+            .stats {
                 grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .stat-number {
+                font-size: 42px;
+            }
+
+            /* Contact Mobile */
+            .contact-content p {
+                font-size: 16px;
+            }
+
+            .contact-tagline {
+                font-size: 22px;
+            }
+
+            .contact-item {
+                font-size: 16px;
+                padding: 14px 20px;
+            }
+
+            /* LinkedIn Icons Mobile */
+            .team-linkedin {
+                width: 30px;
+                height: 30px;
+                font-size: 16px;
+            }
+
+            /* Footer Mobile */
+            .footer-logo {
+                width: 120px;
+                height: auto;
+            }
+
+            .linkedin-button {
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
             }
 
             .menu-toggle {
                 display: flex;
+            }
+
+            /* Smooth scrolling on mobile */
+            html {
+                scroll-behavior: smooth;
+                -webkit-overflow-scrolling: touch;
             }
         }
 
@@ -2072,6 +2213,29 @@
                 }
             }
         }
+
+        // ==========================================
+        // SCROLL INDICATOR VISIBILITY (Hero only)
+        // ==========================================
+        const scrollIndicator = document.getElementById('scrollIndicator');
+        const heroSection = document.querySelector('.hero');
+        
+        function updateScrollIndicatorVisibility() {
+            const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+            const scrollPosition = window.scrollY;
+            
+            // Show indicator only when in hero section
+            if (scrollPosition < heroBottom - 100) {
+                scrollIndicator.classList.add('visible');
+            } else {
+                scrollIndicator.classList.remove('visible');
+            }
+        }
+        
+        // Update on scroll
+        window.addEventListener('scroll', updateScrollIndicatorVisibility);
+        // Initial check
+        updateScrollIndicatorVisibility();
     </script>
 </body>
 </html>
