@@ -337,6 +337,62 @@
             margin-bottom: 40px;
         }
 
+        /* CRO: Hero Subheadline */
+        .hero-subheadline {
+            font-size: 20px;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto 35px;
+            opacity: 0.95;
+            font-weight: 400;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        /* CRO: Hero Primary CTA Button */
+        .hero-cta-button {
+            display: inline-block;
+            padding: 18px 45px;
+            background: var(--accent-gold);
+            color: var(--primary-dark);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.5);
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 50px;
+        }
+
+        .hero-cta-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: var(--accent-yellow);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .hero-cta-button:hover::before {
+            width: 400px;
+            height: 400px;
+        }
+
+        .hero-cta-button span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(212, 175, 55, 0.7), 0 0 40px rgba(212, 175, 55, 0.5);
+        }
+
         .cta-button {
             display: inline-block;
             padding: 18px 45px;
@@ -1208,7 +1264,7 @@
             text-align: center;
             position: relative;
             overflow: hidden;
-            padding: 40px 20px;
+            padding: 60px 20px;
         }
 
         #contact::before {
@@ -1219,73 +1275,238 @@
             right: 0;
             bottom: 0;
             background: radial-gradient(circle at 30% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 50%);
+            z-index: 0;
         }
 
-        .contact-content {
+        /* CRO: Contact intro text */
+        .contact-intro {
             max-width: 700px;
-            margin: 0 auto;
+            margin: 0 auto 40px;
+            font-size: 18px;
+            opacity: 0.9;
             position: relative;
             z-index: 1;
         }
 
-        .contact-content p {
+        /* CRO: Contact form wrapper */
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            text-align: left;
+        }
+
+        .contact-form-container {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 14px 18px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 10px;
+            color: var(--text-light);
+            font-size: 16px;
+            font-family: var(--font-body);
+            transition: all 0.3s ease;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+        }
+
+        .form-group select {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23D4AF37' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+            padding-right: 40px;
+        }
+
+        .form-group select option {
+            background: var(--primary-dark);
+            color: var(--text-light);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-submit-btn {
+            padding: 16px 40px;
+            background: var(--accent-gold);
+            color: var(--primary-dark);
+            border: none;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+
+        .form-submit-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: var(--accent-yellow);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .form-submit-btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .form-submit-btn span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .form-submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+        }
+
+        .form-success {
+            display: none;
+            padding: 15px;
+            background: rgba(76, 175, 80, 0.2);
+            border: 1px solid rgba(76, 175, 80, 0.5);
+            border-radius: 10px;
+            color: #4CAF50;
+            font-weight: 600;
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        .form-success.show {
+            display: block;
+        }
+
+        /* CRO: Contact sidebar */
+        .contact-info-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .contact-direct,
+        .contact-benefits {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .contact-direct h3,
+        .contact-benefits h3 {
             font-size: 20px;
-            margin-bottom: 40px;
-            opacity: 0.9;
+            margin-bottom: 15px;
+            color: var(--accent-gold);
+        }
+
+        .contact-email {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 50px;
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-email:hover {
+            background: rgba(212, 175, 55, 0.2);
+            border-color: var(--accent-gold);
+            transform: translateX(5px);
+        }
+
+        .email-icon {
+            font-size: 18px;
+        }
+
+        .contact-benefits ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .contact-benefits li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .contact-benefits li:last-child {
+            border-bottom: none;
+        }
+
+        .contact-benefits strong {
+            color: var(--accent-gold);
+            font-weight: 600;
         }
 
         .contact-tagline {
             font-size: 28px;
             font-weight: 600;
             color: var(--accent-gold);
-            margin-top: 15px;
+            margin-top: 40px;
             margin-bottom: 0;
             text-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
-        }
-
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            margin-top: 15px;
-        }
-
-        .contact-item {
-            font-size: 18px;
-            color: var(--text-light);
-            text-decoration: none;
-            padding: 12px 24px;
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(212, 175, 55, 0.3);
-            border-radius: 50px;
-            transition: all 0.3s ease;
             position: relative;
-            overflow: hidden;
-            display: inline-block;
-            width: auto;
-        }
-
-        .contact-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: var(--accent-gold);
-            transition: left 0.4s ease;
-            z-index: -1;
-        }
-
-        .contact-item:hover::before {
-            left: 0;
-        }
-
-        .contact-item:hover {
-            color: var(--text-dark);
-            border-color: var(--accent-gold);
-            transform: translateX(5px);
-            box-shadow: 0 0 20px rgba(212, 175, 55, 0.5), 0 0 40px rgba(212, 175, 55, 0.3);
+            z-index: 1;
         }
 
         /* ============================================
@@ -1385,9 +1606,24 @@
             }
 
             .hero-statement {
-                font-size: 24px;
+                font-size: 26px;
                 margin-bottom: 10px;
                 line-height: 1.3;
+            }
+
+            /* CRO: Hero subheadline mobile */
+            .hero-subheadline {
+                font-size: 16px;
+                line-height: 1.5;
+                margin: 0 auto 25px;
+                padding: 0 10px;
+            }
+
+            /* CRO: Hero CTA mobile */
+            .hero-cta-button {
+                font-size: 16px;
+                padding: 14px 35px;
+                margin-bottom: 40px;
             }
 
             .scroll-indicator {
@@ -1523,7 +1759,7 @@
 
             .service-card h3 {
                 font-size: 20px;
-                margin-top: 35px;
+                margin-top: 60px;
             }
 
             .service-number {
@@ -1558,26 +1794,67 @@
 
             /* Contact Mobile */
             #contact {
-                padding: 30px 20px;
+                padding: 40px 20px;
             }
 
-            .contact-content p {
+            .contact-intro {
                 font-size: 16px;
+                margin-bottom: 30px;
+            }
+
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .contact-form-container {
+                padding: 25px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .form-group input,
+            .form-group select,
+            .form-group textarea {
+                font-size: 16px;
+                padding: 12px 16px;
+            }
+
+            .form-submit-btn {
+                font-size: 16px;
+                padding: 14px 35px;
+            }
+
+            .contact-info-sidebar {
+                gap: 20px;
+            }
+
+            .contact-direct,
+            .contact-benefits {
+                padding: 20px;
+            }
+
+            .contact-direct h3,
+            .contact-benefits h3 {
+                font-size: 18px;
+            }
+
+            .contact-email {
+                font-size: 14px;
+                padding: 10px 16px;
+            }
+
+            .contact-benefits li {
+                font-size: 14px;
+                padding: 10px 0;
             }
 
             .contact-tagline {
-                font-size: 20px;
-                margin-top: 10px;
-            }
-
-            .contact-item {
-                font-size: 15px;
-                padding: 10px 20px;
-            }
-
-            .contact-info {
-                gap: 12px;
-                margin-top: 12px;
+                font-size: 22px;
+                margin-top: 30px;
             }
 
             /* Footer Mobile */
@@ -1608,9 +1885,9 @@
 
             /* LinkedIn Icons Mobile */
             .team-linkedin {
-                width: 30px;
-                height: 30px;
-                font-size: 16px;
+                width: 44px;
+                height: 44px;
+                font-size: 18px;
             }
 
             .menu-toggle {
@@ -1725,6 +2002,14 @@
             <div class="tagline">From Dirt to Data</div>
             <div class="hero-statement">We don't just develop land.</div>
             <div class="hero-statement">We power the digital future.</div>
+            
+            <!-- PRIORITY 1: Hero Subheadline for clarity -->
+            <p class="hero-subheadline">Transforming raw land into hyperscaler-ready data center campuses with secured power and pre-qualified tenants—in 30 days, not 12 months.</p>
+            
+            <!-- PRIORITY 1: Primary CTA Button -->
+            <a href="#contact" class="hero-cta-button">
+                <span>Schedule Consultation</span>
+            </a>
         </div>
         <div class="scroll-indicator" id="scrollIndicator" onclick="scrollToNextSection()">
             <span>Scroll to Explore</span>
@@ -2040,13 +2325,78 @@
     <!-- CONTACT SECTION -->
     <section id="contact" class="reveal">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <a href="mailto:info@powerpath-partners.com" class="contact-item">info@powerpath-partners.com</a>
+            <h2 class="section-title">Start Your Project</h2>
+            <p class="contact-intro">Ready to transform your infrastructure into a hyperscale data center destination? Let's discuss how PowerPath Partners can accelerate your path from dirt to data.</p>
+            
+            <div class="contact-wrapper">
+                <div class="contact-form-container">
+                    <form id="contactForm" class="contact-form" onsubmit="handleFormSubmit(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" id="fullName" name="fullName" placeholder="Full Name *" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" placeholder="Email *" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="tel" id="phone" name="phone" placeholder="Phone">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="company" name="company" placeholder="Company *" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <select id="projectType" name="projectType" required>
+                                <option value="">I'm interested in... *</option>
+                                <option value="land-development">Land Development</option>
+                                <option value="power-infrastructure">Power Infrastructure</option>
+                                <option value="tenant-representation">Tenant Representation</option>
+                                <option value="partnership">Partnership Opportunity</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" id="projectSize" name="projectSize" placeholder="Project Size / MW Capacity (optional)">
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Tell us about your project..." rows="4"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="form-submit-btn">
+                            <span>Get Started</span>
+                        </button>
+                        
+                        <p class="form-success" id="formSuccess">Thank you! We'll be in touch within 24 hours.</p>
+                    </form>
                 </div>
-                <p class="contact-tagline">From Dirt to Data</p>
+                
+                <div class="contact-info-sidebar">
+                    <div class="contact-direct">
+                        <h3>Direct Contact</h3>
+                        <a href="mailto:info@powerpath-partners.com" class="contact-email">
+                            <span class="email-icon">✉</span>
+                            info@powerpath-partners.com
+                        </a>
+                    </div>
+                    
+                    <div class="contact-benefits">
+                        <h3>What Happens Next?</h3>
+                        <ul>
+                            <li><strong>1. Initial Call</strong> - We'll schedule a 30-minute consultation</li>
+                            <li><strong>2. Site Assessment</strong> - Review your project requirements</li>
+                            <li><strong>3. Custom Strategy</strong> - Tailored roadmap from dirt to data</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
+            
+            <p class="contact-tagline">From Dirt to Data</p>
         </div>
     </section>
 
@@ -2211,6 +2561,46 @@
             } else {
                 button.textContent = 'Read more';
                 button.classList.remove('expanded');
+            }
+        }
+
+        // ==========================================
+        // CONTACT FORM SUBMISSION
+        // ==========================================
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            // Get form data
+            const form = event.target;
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData);
+            
+            console.log('Form submitted:', data);
+            
+            // TODO: Send to your backend/email service
+            // Example options:
+            // 1. Formspree: change form action to https://formspree.io/f/YOUR_FORM_ID
+            // 2. EmailJS: use emailjs.send()
+            // 3. Custom API endpoint
+            
+            // Show success message
+            const successMsg = document.getElementById('formSuccess');
+            successMsg.classList.add('show');
+            
+            // Reset form
+            form.reset();
+            
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                successMsg.classList.remove('show');
+            }, 5000);
+            
+            // Optional: Track conversion in analytics
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'form_submit', {
+                    'event_category': 'Contact',
+                    'event_label': 'Contact Form Submission'
+                });
             }
         }
 
