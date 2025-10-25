@@ -75,12 +75,25 @@
             max-width: var(--content-max-width);
             margin: 0 auto;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
         }
 
         .logo {
-            display: none;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text-light);
+            text-decoration: none;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .logo span {
+            color: var(--accent-gold);
         }
 
         nav ul {
@@ -267,19 +280,28 @@
         }
 
         .hero-logo {
-            width: 280px;
-            height: 280px;
-            margin: 40px auto 20px;
+            width: 240px;
+            height: 240px;
+            margin: 60px auto 20px;
             display: block;
-            filter: drop-shadow(0 4px 20px rgba(0,0,0,0.3)) drop-shadow(0 0 8px rgba(212, 175, 55, 0.4));
+            filter: drop-shadow(0 0 40px rgba(212, 175, 55, 0.9)) drop-shadow(0 0 15px rgba(212, 175, 55, 0.6));
             transition: all 0.4s ease;
             cursor: pointer;
             border-radius: 50%;
+            animation: logoGlow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes logoGlow {
+            0% {
+                filter: drop-shadow(0 0 40px rgba(212, 175, 55, 0.9)) drop-shadow(0 0 15px rgba(212, 175, 55, 0.6));
+            }
+            100% {
+                filter: drop-shadow(0 0 50px rgba(212, 175, 55, 1)) drop-shadow(0 0 25px rgba(212, 175, 55, 0.8));
+            }
         }
 
         .hero-logo:hover {
-            filter: drop-shadow(0 0 40px rgba(212, 175, 55, 0.9)) drop-shadow(0 0 15px rgba(212, 175, 55, 0.6));
-            transform: scale(1.08);
+            transform: scale(1.05);
         }
 
         .hero h1 {
@@ -333,6 +355,7 @@
             opacity: 0.95;
             font-weight: 400;
             text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            color: var(--accent-gold);
         }
 
         /* CRO: Hero Primary CTA Button */
@@ -1587,9 +1610,9 @@
             }
 
             .hero-logo {
-                width: 180px;
-                height: 180px;
-                margin: 15px auto 15px;
+                width: 160px;
+                height: 160px;
+                margin: 30px auto 15px;
             }
 
             .hero-statement {
@@ -1957,6 +1980,7 @@
     <!-- NAVIGATION -->
     <nav id="navbar">
         <div class="container">
+            <a href="#" class="logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">PowerPath <span>Partners</span></a>
             <div class="menu-toggle" id="menuToggle">
                 <span></span>
                 <span></span>
@@ -1990,7 +2014,7 @@
             <div class="hero-statement">We power the digital future.</div>
             
             <!-- PRIORITY 1: Hero Subheadline for clarity -->
-            <p class="hero-subheadline">Transforming raw land into hyperscaler-ready data center campuses with secured power and pre-qualified tenants—in 30 days, not 12 months.</p>
+            <p class="hero-subheadline">Turning raw land into hyperscale-ready campuses with secured power and committed tenants.</p>
             
             <!-- PRIORITY 1: Primary CTA Button -->
             <a href="#contact" class="hero-cta-button">
