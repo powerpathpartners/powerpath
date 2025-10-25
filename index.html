@@ -382,11 +382,21 @@
 
         /* Scroll Indicator */
         .scroll-indicator {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
             text-align: center;
             color: var(--accent-gold);
             font-weight: 600;
             font-size: 16px;
-            animation: fadeInUp 2s ease-out 1s backwards;
+            z-index: 100;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .scroll-indicator:hover {
+            transform: translateX(-50%) scale(1.1);
         }
 
         .scroll-indicator span {
@@ -1547,10 +1557,10 @@
             <div class="tagline">From Dirt to Data</div>
             <div class="hero-statement">We don't just develop land.</div>
             <div class="hero-statement">We power the digital future.</div>
-            <div class="scroll-indicator">
-                <span>Scroll to Explore</span>
-                <div class="scroll-arrow">↓</div>
-            </div>
+        </div>
+        <div class="scroll-indicator" id="scrollIndicator" onclick="scrollToNextSection()">
+            <span>Scroll to Explore</span>
+            <div class="scroll-arrow">↓</div>
         </div>
     </section>
 
@@ -2033,6 +2043,33 @@
             } else {
                 button.textContent = 'Read more';
                 button.classList.remove('expanded');
+            }
+        }
+
+        // ==========================================
+        // SCROLL TO NEXT SECTION
+        // ==========================================
+        function scrollToNextSection() {
+            const sections = document.querySelectorAll('section');
+            const scrollPosition = window.scrollY;
+            
+            for (let i = 0; i < sections.length; i++) {
+                const section = sections[i];
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                
+                // If we're before or in the middle of this section, scroll to the next one
+                if (scrollPosition < sectionTop + sectionHeight - 100) {
+                    const nextSection = sections[i + 1];
+                    if (nextSection) {
+                        nextSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        break;
+                    } else {
+                        // If at last section, scroll to top
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                        break;
+                    }
+                }
             }
         }
     </script>
