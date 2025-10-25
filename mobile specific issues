@@ -1,0 +1,61 @@
+IMPLEMENT IMMEDIATELY:
+
+1. Hero Statements Mobile:
+   font-size: 26px (currently 24px)
+   line-height: 1.2
+   
+2. Service Cards Mobile:
+   .service-card h3 {
+     margin-top: 60px; /* increase from 35px */
+   }
+
+3. Connect the Dots Line:
+   @media (max-width: 768px) {
+     .about-content p:last-of-type {
+       white-space: normal !important;
+       font-size: 15px;
+     }
+   }
+
+4. Touch Targets:
+   .team-linkedin {
+     width: 44px;  /* increase from 30px */
+     height: 44px;
+     font-size: 18px;
+   }
+
+5. Forms (when added):
+   input, textarea {
+     font-size: 16px; /* prevents iOS zoom */
+     padding: 14px;
+   }
+```
+
+---
+
+## 🎨 DESIGN ENHANCEMENTS
+
+### 1. **Visual Hierarchy Improvements**
+```
+PRIORITY CHANGES:
+
+Hero Section:
+- Add subtle video overlay (20% opacity)
+- Add value prop subheadline
+- Add primary CTA button above scroll indicator
+
+Service Cards:
+- Add hover state that reveals "Learn More" button
+- Add iconography for each service
+- Consider: Numbered cards become clickable modals
+
+Case Study:
+- Make it a full-width featured section
+- Add background image
+- Larger text, more prominent
+- "See More Projects" CTA
+
+Team Section:
+- Add "Schedule Call" buttons under each bio
+- Show availability indicators (green dot)
+- Link directly to calendar booking
