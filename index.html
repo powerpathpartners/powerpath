@@ -1259,7 +1259,7 @@
             text-align: center;
             position: relative;
             overflow: hidden;
-            padding: 60px 20px;
+            padding: 40px 20px;
         }
 
         #contact::before {
@@ -1276,7 +1276,7 @@
         /* CRO: Contact intro text */
         .contact-intro {
             max-width: 700px;
-            margin: 0 auto 40px;
+            margin: 0 auto 25px;
             font-size: 18px;
             opacity: 0.9;
             position: relative;
@@ -1287,7 +1287,7 @@
         .contact-wrapper {
             display: grid;
             grid-template-columns: 1.5fr 1fr;
-            gap: 50px;
+            gap: 30px;
             max-width: 1200px;
             margin: 0 auto;
             position: relative;
@@ -1297,7 +1297,7 @@
 
         .contact-form-container {
             background: rgba(255, 255, 255, 0.05);
-            padding: 40px;
+            padding: 25px;
             border-radius: 20px;
             border: 1px solid rgba(212, 175, 55, 0.2);
             backdrop-filter: blur(10px);
@@ -1306,13 +1306,13 @@
         .contact-form {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 15px;
         }
 
         .form-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 20px;
+            gap: 15px;
         }
 
         .form-group {
@@ -1323,7 +1323,7 @@
         .form-group input,
         .form-group select,
         .form-group textarea {
-            padding: 14px 18px;
+            padding: 10px 14px;
             background: rgba(255, 255, 255, 0.1);
             border: 1px solid rgba(212, 175, 55, 0.3);
             border-radius: 10px;
@@ -1363,7 +1363,7 @@
 
         .form-group textarea {
             resize: vertical;
-            min-height: 100px;
+            min-height: 70px;
         }
 
         .form-submit-btn {
@@ -1429,13 +1429,13 @@
         .contact-info-sidebar {
             display: flex;
             flex-direction: column;
-            gap: 30px;
+            gap: 20px;
         }
 
         .contact-direct,
         .contact-benefits {
             background: rgba(255, 255, 255, 0.05);
-            padding: 30px;
+            padding: 20px;
             border-radius: 15px;
             border: 1px solid rgba(212, 175, 55, 0.2);
         }
@@ -1497,7 +1497,7 @@
             font-size: 28px;
             font-weight: 600;
             color: var(--accent-gold);
-            margin-top: 40px;
+            margin-top: 25px;
             margin-bottom: 0;
             text-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
             position: relative;
@@ -2321,7 +2321,7 @@
             
             <div class="contact-wrapper">
                 <div class="contact-form-container">
-                    <form id="contactForm" class="contact-form" onsubmit="handleFormSubmit(event)">
+                    <form id="contactForm" class="contact-form" action="https://formspree.io/f/xdkovvae" method="POST" onsubmit="handleFormSubmit(event)">
                         <div class="form-row">
                             <div class="form-group">
                                 <input type="text" id="fullName" name="fullName" placeholder="Full Name *" required>
@@ -2564,35 +2564,44 @@
             // Get form data
             const form = event.target;
             const formData = new FormData(form);
-            const data = Object.fromEntries(formData);
             
-            console.log('Form submitted:', data);
-            
-            // TODO: Send to your backend/email service
-            // Example options:
-            // 1. Formspree: change form action to https://formspree.io/f/YOUR_FORM_ID
-            // 2. EmailJS: use emailjs.send()
-            // 3. Custom API endpoint
-            
-            // Show success message
-            const successMsg = document.getElementById('formSuccess');
-            successMsg.classList.add('show');
-            
-            // Reset form
-            form.reset();
-            
-            // Hide success message after 5 seconds
-            setTimeout(() => {
-                successMsg.classList.remove('show');
-            }, 5000);
-            
-            // Optional: Track conversion in analytics
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'form_submit', {
-                    'event_category': 'Contact',
-                    'event_label': 'Contact Form Submission'
-                });
-            }
+            // Submit to Formspree (sends to info@powerpath-partners.com)
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Show success message
+                    const successMsg = document.getElementById('formSuccess');
+                    successMsg.classList.add('show');
+                    
+                    // Reset form
+                    form.reset();
+                    
+                    // Hide success message after 5 seconds
+                    setTimeout(() => {
+                        successMsg.classList.remove('show');
+                    }, 5000);
+                    
+                    // Track conversion in analytics
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'form_submit', {
+                            'event_category': 'Contact',
+                            'event_label': 'Contact Form Submission'
+                        });
+                    }
+                } else {
+                    alert('Oops! There was a problem submitting your form. Please try emailing us directly at info@powerpath-partners.com');
+                }
+            })
+            .catch(error => {
+                console.error('Form submission error:', error);
+                alert('Oops! There was a problem submitting your form. Please try emailing us directly at info@powerpath-partners.com');
+            });
         }
 
         // ==========================================
